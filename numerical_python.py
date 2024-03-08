@@ -304,7 +304,11 @@ print(arr)
 arr = np.logspace(2., 5., 20, endpoint=False)
 print(arr)'''
 
+# 47
 
+arr = np.tri(4, 3, -1)
+
+print(arr)
 
 
 
