@@ -297,8 +297,12 @@ print(y)
 # 45
 
 arr = np.linspace(2.5, 6.5, 30)
-print(arr)'''
+print(arr)
 
+# 46
+
+arr = np.logspace(2., 5., 20, endpoint=False)
+print(arr)'''
 
 
 
