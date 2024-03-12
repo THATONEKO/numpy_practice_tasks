@@ -420,7 +420,7 @@ print(c)
 arr = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14])
 
 arr2 = np.array_split(arr, [2, 6])
-print(arr2)'''
+print(arr2)
 
 # 62
 
@@ -429,6 +429,74 @@ a = np.array([[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12], [13, 14, 15, 16]])
 print(np.hsplit(a, [2, 6]))
 
 # 63
+
+x = np.array([[0, 10, 0, 0], [0, -3, 0, 9]])
+print(x)
+
+print(np.count_nonzero(x))
+
+# 64
+
+arr = np.zeros((5, 5))
+print(arr)
+
+arr += np.arange(5)
+print(arr)
+
+# 65 check the presence of an object
+
+x = np.array([[1.12, 2.0, 3.45], [2.33, 5.12, 6.0]], float)
+
+print(1.12 in x)
+print(4 in x)
+
+# 66
+
+arr = np.linspace(0, 1, 12, endpoint=True)[1:-1]
+
+print(arr)
+
+# 67
+
+# Importing the NumPy library and aliasing it as 'np'
+
+# Creating a NumPy array 'x' filled with zeros, containing 10 elements
+x = np.zeros(10)
+
+# Setting the 'writeable' flag of the array 'x' to False, making it read-only
+x.flags.writeable = False
+
+# Printing a message to test whether the array is read-only or not
+print("Test the array is read-only or not:")
+
+# Attempting to change the value of the first element in the array 'x'
+print("Try to change the value of the first element:")
+x[0] = 1  # This line will raise an error since the array is read-only
+
+# 68
+
+arr = np.arange(1, 100)
+
+n = arr[(arr % 3 == 0) | (arr % 5 == 0)]
+
+print(n[:1000])
+
+print(n.sum())
+
+
+# 69
+
+arr = np.arange(10e3)
+print(arr)'''
+
+# 70
+
+x = np.arange(12).reshape(3, 4)
+
+for x in np.nditer(x):
+    print(x, end=' ')
+
+print()
 
 
 
