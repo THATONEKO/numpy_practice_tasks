@@ -279,7 +279,7 @@ print(arr1)
 
 # 42 diagonal ones 
 
-x = np.eye(4)
+x = np.eye(3)
 print(x)
 
 # 43 diagonal numbers
@@ -302,13 +302,138 @@ print(arr)
 # 46
 
 arr = np.logspace(2., 5., 20, endpoint=False)
-print(arr)'''
+print(arr)
 
 # 47
 
 arr = np.tri(4, 3, -1)
 
 print(arr)
+
+# 48
+
+x = np.triu(np.arange(2, 14).reshape(4, 3), -1)
+print(x)
+
+# 49
+
+x = np.eye(3)
+print(x)
+
+newarr = x.reshape(-1)
+print(newarr)
+
+# 50
+
+x = np.array([[2, 4, 6], [6, 8, 10]], np.int32)
+print(x)
+
+e = x.flat[4]
+print(e)
+
+# 51
+
+x = np.array([[1, 2, 3]])
+print(x)
+
+y = np.swapaxes(x, 0, 1)
+print(y)
+# 52
+
+x = np.zeros((2, 4, 6))
+print(x)
+
+print(np.moveaxis(x, 0, -1).shape)
+
+print(np.moveaxis(x, -1, 0).shape)
+
+# 53
+
+x = np.ones((2, 3, 4, 5))
+print(x)
+print(np.rollaxis(x, 3, 1).shape)
+
+# 54
+
+x = 12.0
+
+print(np.atleast_1d(x))
+
+x = np.arange(6.0).reshape(2, 3)
+print(np.atleast_1d(x))
+
+print(np.atleast_1d(1, [3, 4]))
+
+# 55
+
+x = 16
+print(np.atleast_1d(x))
+
+arr = np.arange(4.0).reshape(2, 2)
+print(np.atleast_1d(arr))
+
+x = 5
+print(np.atleast_3d(x))
+
+# 56
+
+arr = np.zeros((3, 4))
+print(arr)
+
+arr1 = np.expand_dims(arr, axis=1)
+print(arr1)
+
+# 57
+
+x = np.zeros((3, 1, 4))
+
+print(np.squeeze(x))
+
+# 58
+
+a = np.array([[2, 4, 6], [8, 10, 12]])
+b = np.array([[1, 3, 5], [7, 9, 11]])
+
+c = np.concatenate((a, b), 1)
+
+print(c)
+
+# 59
+
+a = np.array([10, 20, 30])
+b = np.array([40, 50, 60])
+
+c = np.stack((a, b), axis=1)
+print(c)
+
+# 60
+
+a = np.array([[10], [20], [30]])
+b = np.array([[40], [50], [60]])
+
+c = np.dstack((a, b))
+
+print(c)
+
+# 61
+
+arr = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14])
+
+arr2 = np.array_split(arr, [2, 6])
+print(arr2)'''
+
+# 62
+
+a = np.array([[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12], [13, 14, 15, 16]])
+
+print(np.hsplit(a, [2, 6]))
+
+# 63
+
+
+
+
+
 
 
 
