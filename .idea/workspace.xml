@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="19a444f7-90ed-4533-a9cb-953b34a0b5c2" name="Changes" comment="more practice">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/numerical_python.py" beforeDir="false" afterPath="$PROJECT_DIR$/numerical_python.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,7 +63,23 @@
       <option name="project" value="LOCAL" />
       <updated>1709903095913</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="more practice">
+      <option name="closed" value="true" />
+      <created>1710234142084</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1710234142084</updated>
+    </task>
+    <task id="LOCAL-00003" summary="more practice">
+      <option name="closed" value="true" />
+      <created>1710237388629</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1710237388629</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

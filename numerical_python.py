@@ -487,7 +487,7 @@ print(n.sum())
 # 69
 
 arr = np.arange(10e3)
-print(arr)'''
+print(arr)
 
 # 70
 
@@ -497,6 +497,106 @@ for x in np.nditer(x):
     print(x, end=' ')
 
 print()
+
+# 71
+
+arr = np.arange(12).reshape(3, 4)
+
+for x in np.nditer(arr, order="F"):
+    print(x, end=' ')
+
+print("\n")
+
+# 72
+
+arr = np.zeros((5, 5, 5)).astype(int) + 4
+print(arr)
+
+# 73
+
+arr = np.arange(12).reshape(3, 4)
+print(arr)
+
+for a in np.nditer(arr, op_flags=['readwrite']):
+    a[...] = 3 * a
+
+print(arr)
+
+# 74
+
+arr = np.arange(4)
+print(arr)
+
+arr1 = np.arange(8).reshape(2, 4)
+print(arr1)
+
+for a, b in np.nditer([arr, arr1]):
+    print("%d:%d" % (a, b), end='\n')
+
+print()
+
+# 75
+
+arr = np.zeros((3,), dtype=('i4,f4,a40'))
+new_data = [(1, 2., "Albert Einstein"), (2, 2., "Edmond Halley"), (3, 3., "Gertrude B. Elion")]
+
+arr[:] = new_data
+print(arr)
+
+# 76 return elements as cube numbers
+
+def cube(e):
+    it = np.nditer([e, None])
+
+    for a, b in it:
+        b[...] = a * a * a
+
+    return it.operands[1]
+
+print(cube([2, 4, 6]))
+
+# 77
+
+arr = np.arange(12).reshape(3, 4)
+print(arr)
+for a in np.nditer(arr, flags=['external_loop'], order="F"):
+    print(a)
+
+# 78 
+
+a1 = np.array([1, 2, 3, 4])
+a2 = np.array(['Red', 'Green', 'White', 'Orange'])
+a3 = np.array([12.20, 15, 20, 40])
+
+result = np.core.records.fromarrays([a1, a2, a3], names='a,b,c')
+
+print(result[0])
+print(result[1])
+print(result[2])
+
+# 79
+
+x, y = np.meshgrid(np.linspace(-1, 1, 10),np.linspace(-1, 1, 10))
+d = np.sqrt(x*x + y*y)
+
+sigma, mu = 1.0, 0.0
+
+g = np.exp(-((d - mu)**2 / (2.0 * sigma**2)))
+
+print(g)
+
+# 80
+
+x = np.arange(6).reshape(3, 2)
+print(x)
+
+print(x.tolist())'''
+
+
+
+
+
+
 
 
 
