@@ -590,7 +590,125 @@ print(g)
 x = np.arange(6).reshape(3, 2)
 print(x)
 
-print(x.tolist())'''
+print(x.tolist())
+
+# 81
+
+arr = np.array([[0, 1], [2, 3], [4, 5], [6, 7], [8, 9]])
+
+print(arr)
+
+print(arr[:, 0])
+
+print(arr[:, 1])
+
+print(arr[:, 2])
+
+# 82
+
+x = np.array([[12.0, 12.51], [2.34, 7.98], [25.23, 36.50]])
+print(x)
+
+print(x.astype(int))
+
+# 83
+
+x = np.array([ 0.26153123, 0.52760141, 0.5718299, 0.5927067, 0.7831874, 0.69746349,
+               0.35399976, 0.99469633, 0.0694458, 0.54711478])
+print(x)
+
+np.set_printoptions(precision=3)
+print(x)
+
+# 84
+
+x = np.array([1.6e-10, 1.6, 1200, .235])
+
+# Printing a message indicating the original array elements will be shown
+print("Original array elements:")
+
+# Printing the original array 'x' with its elements
+print(x)
+
+# Printing a message indicating the suppression of scientific notation in the array display
+print("Array - scientific notation is suppressed")
+
+# Setting the print options to suppress scientific notation in array printing
+np.set_printoptions(suppress=True)
+
+# Printing the array 'x' with scientific notation suppressed
+print(x)
+
+# 85
+
+iterable = (x for x in range(10))
+
+print(np.fromiter(iterable, dtype=int))
+
+# 86 adding additional array column
+
+x = np.array([[10, 20, 30], [40, 50, 60]])
+
+y = np.array([[100], [200]])
+print(np.append(x, y, axis=1))
+
+# 87
+
+x = np.array([[20, 20, 20, 0],
+              [0, 20, 20, 20],
+              [0, 20, 20, 20],
+              [20, 20, 20, 0],
+              [10, 20, 20, 20]])
+
+print(x)
+
+y = np.ascontiguousarray(x).view(np.dtype((np.void, x.dtype.itemsize * x.shape[1])))
+_, idx = np.unique(y, return_index=True)
+unique_result = x[idx]
+
+print(unique_result)
+
+# 88
+
+x = np.array([[0.42436315, 0.48558583, 0.32924763],
+              [0.7439979, 0.58220701, 0.38213418],
+              [0.5097581, 0.34528799, 0.1563123]])
+
+print(x)
+
+x[x > 0.5] = 0.5
+
+print(x)
+
+# 89 deleting array objects using index
+
+x = np.array([10, 20, 30, 40, 50, 60, 70, 80, 90, 100])
+
+index = [0, 3, 7]
+
+print(x)
+
+new_x = np.delete(x, index)
+
+print(new_x)
+
+# 90
+
+x = np.array([-1, -4, 0, 2, 3, 4, 5, -6])
+
+print(x)
+
+x[x < 0] = 0
+
+print(x)'''
+
+
+
+
+
+
+
+
 
 
 
