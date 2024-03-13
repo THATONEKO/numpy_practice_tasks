@@ -789,7 +789,7 @@ print(arr)
 
 print(arr.sum())
 
-print(arr.prod())'''
+print(arr.prod())
 
 # 100
 
@@ -800,6 +800,103 @@ y = np.array([0, 40, 60])
 
 x.put([0, 4], y)
 print(x)
+
+# 101
+
+import sys
+
+nums = np.arange(2000)
+np.set_printoptions(threshold=sys.maxsize)
+
+print(nums)
+
+# 102
+
+data = np.asarray([[10, 20, 30], [40, 50, 60], [70, 80, 90]])
+
+np.savetxt("test.csv", data, delimiter=",")
+
+# 103
+
+from scipy.spatial import distance
+
+p1 = (1, 2, 3)
+p2 = (4, 5, 6)
+
+d = distance.euclidean(p1, p2)
+print(d)
+
+# 104
+
+arra = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+print(arra)
+
+result = arra[:, [1, 2]]
+print(result)
+
+# 105
+
+from numpy import genfromtxt
+
+csv_data = genfromtxt('fdata.csv', dtype=['S10', 'float32', 'float32', 'float32', 'float32', 'float32'], delimiter=",")
+print(csv_data)
+
+# 106 number of occurance of a unique number
+
+nums = np.array([10, 20, 20, 20, 20, 0, 20, 30, 30, 30, 0, 0, 20, 20, 0])
+
+print(nums)
+
+print(np.count_nonzero(nums == 10))
+print(np.count_nonzero(nums == 20))
+print(np.count_nonzero(nums == 30))
+print(np.count_nonzero(nums == 0))
+
+# 107
+
+nums = np.array([1, 2, 3, 4, 5])
+
+p = np.percentile(nums, 50)
+print(p)
+
+p = np.percentile(nums, 40)
+print(p)
+
+p = np.percentile(nums, 40)
+print(p)
+
+# 108
+
+import PIL
+from PIL import Image
+
+img_data = PIL.Image.open('win.png')
+img_arr = np.array(img_data)
+
+print(img_arr)
+
+# 109 array to image
+
+from PIL import Image
+
+img_w, img_h = 200, 200
+
+data = np.zeros((img_h, img_w, 3), dtype=np.uint8)
+
+data[100, 100] = [0, 255, 0]
+
+img = Image.fromarray(data, 'RGB')
+
+img.save('test.png')
+
+img.show()'''
+
+# 110
+
+
+
+
+
 
 
 
