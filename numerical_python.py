@@ -700,7 +700,101 @@ print(x)
 
 x[x < 0] = 0
 
-print(x)'''
+print(x)
+
+# 91 removes rows with non-numeric values
+
+x = np.array([[1, 2, 3], [4, 5, np.nan], [7, 8, 9], [True, False, True]])
+
+print(x)
+
+result = x[~np.isnan(x).any(axis=1)]
+print(result)
+
+# 92
+arr = np.array([3, 6, 11, 19, 23,])
+arr1 = np.array(['a', 'e', 'i', 'o', 'u'])
+
+print(arr)
+print(arr1)
+
+result = arr1[(10 < arr) & (arr < 30)]
+
+print(result)
+
+# 93
+
+x = np.array([1, 2, 3, 4, 5])
+
+print(x)
+
+magnitude = np.linalg.norm(x)
+print(magnitude)
+
+# 94 frequency of unique elements
+
+a = np.array([10, 10, 20, 10, 20, 20, 20, 30, 30, 50, 40, 40])
+print(a)
+
+unique_elements, counts_elements = np.unique(a, return_counts=True)
+
+results = np.asarray((unique_elements, counts_elements))
+
+print(results)
+
+# 95 checking if an array is empty or not
+
+x = np.array([2, 3])
+y = np.array([])
+
+print(x.size)
+print(y.size)
+
+# 96 dividing rows by vectors
+
+x = np.array([[20, 20, 20], [30, 30, 30], [40, 40, 40]])
+print(x)
+
+v = np.array([20, 30, 40])
+print(v)
+
+result = x / v[:, None]
+print(result)
+
+# 97
+
+import sys
+
+np.set_printoptions(threshold=sys.maxsize)
+
+x = np.zeros((4, 4))
+print(x)
+
+# 98
+
+arr = np.array([10, 20, 30], float)
+
+print(arr)
+
+arr1 = arr.tobytes()
+print(arr1)
+
+arr2 = np.frombuffer(arr1)
+print(arr2)
+
+# 99
+
+arr = np.array([10, 20, 30], float)
+print(arr)
+
+print(arr.sum())
+
+print(arr.prod())'''
+
+# 100
+
+
+
 
 
 
